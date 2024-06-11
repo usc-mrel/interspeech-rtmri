@@ -10,7 +10,7 @@ The following code is split into three separate code-bases. Some of them are sep
 One example dataset can be found at [this link](https://drive.google.com/drive/folders/1ZP3Ztb4DEi4iH6kdqNjPRvvTDhjDGXLy?usp=drive_link). If you have issues, please contact prakashk@usc.edu.
 
 ### Pulse Sequence Generation
-Pulse Sequence generation code requires code from [https://github.com/usc-mrel/rtspiral_pypulseq](this repository).
+Pulse Sequence generation code requires code from [this repository](https://github.com/usc-mrel/rtspiral_pypulseq).
 The code points to a `config.toml` file, for which relevant config.toml files are in this repository, in the `pulseq_configs` folder.
 The code will output trajectory files into a folder. 
 
