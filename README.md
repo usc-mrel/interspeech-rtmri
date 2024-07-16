@@ -1,6 +1,6 @@
 ## State-of-the-art speech production MRI protocol for new 0.55 Tesla scanners
 
-DOI: 10.5281/zenodo.12751561
+[![DOI](https://zenodo.org/badge/810527636.svg)](https://zenodo.org/doi/10.5281/zenodo.12751560)
 
 Code accompanying Interspeech 2024 Submission
 
