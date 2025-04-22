@@ -16,6 +16,7 @@ adc_dwell   = 1e-6 # [s]
 arm_ordering = 'linear' # 'linear', 'ga', 'tinyga', 'linear_custom'
 GA_steps    = 144  # 0 to disable GA
 GA_angle    = 111.246  # [deg]
+grad_rew_method = "ext_trap_area"
 # custom_order = [0,1,2,3,4,5,6,7,8,9] # Custom ordering of the arms determined by 0-indexed interleave number. Only enabled if arm_ordering='linear_custom'
 # Note: custom_order assumes the number of interleaves, and does not work if it does not match.
 
