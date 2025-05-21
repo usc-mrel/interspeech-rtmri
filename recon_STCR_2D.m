@@ -3,7 +3,7 @@ TRAJ_SEARCH_PATH = 'trajectory';
 USC_DYNAMIC_RECON_TOOLBOX_PATH = '/server/home/pkumar/repos/usc_dynamic_reconstruction/';
 ISMRMRD_PATH = '/server/home/pkumar/repos/ismrmrd/matlab/';
 
-USE_GPU = 1; % if you don't have a GPU, disable.
+USE_GPU = 0; % if you don't have a GPU, disable.
 
 addpath(USC_DYNAMIC_RECON_TOOLBOX_PATH)
 addpath([USC_DYNAMIC_RECON_TOOLBOX_PATH, 'encoding']);
@@ -90,7 +90,9 @@ for file_idx = [1:nfile]
     % TODO: re-do density compensation (it is bad!)
     rootw = sqrt(w');
     kspace = kspace .* rootw;
-    kspace = gpuArray(kspace);
+    if USE_GPU
+        kspace = gpuArray(kspace);
+    end
     E = Fnufft_2D(kx, ky, n_coil, matrix_size, USE_GPU, rootw, 1.5, [4, 4]);
     x0_ = E' * kspace;
     
